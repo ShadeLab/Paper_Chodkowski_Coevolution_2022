@@ -1,0 +1,1 @@
+Code and data files used to generate Figures 2  and 4. The breseq workflow is also presented. Breseq qas used to assess mutations in clonal isolates from *F. johnsoniae* coevolved lines and *F. johnsoniae* monoculture lines.  
