@@ -5,8 +5,8 @@ Data and code files for Figure 2 <br>
 * Efflux_inhibitor_experiment.r
 
 Data and code files for Figure 4 <br>
-Fj_RadialGrowthMeasurements.csv <br>
-Fj_RadialGrowthMeasurements.r
+* Fj_RadialGrowthMeasurements.csv <br>
+* Fj_RadialGrowthMeasurements.r
 
 Data and code files for breseq <br>
 
