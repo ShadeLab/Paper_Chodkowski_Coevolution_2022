@@ -1,0 +1,42 @@
+Condition,Treatment,OD
+Flavo_culture_control,Culture control,0.805666667
+Flavo_culture_control,Culture control,0.87375
+Flavo_culture_control,Culture control,0.7613
+Flavo_culture_control,Culture control,0.7459
+Flavo_culture_control,Culture control,0.84625
+Flavo_culture_DMSO_control,DMSO,0.852316667
+Flavo_culture_DMSO_control,DMSO,0.803283333
+Flavo_culture_DMSO_control,DMSO,0.764383333
+Flavo_culture_DMSO_control,DMSO,0.73275
+Flavo_culture_DMSO_control,DMSO,0.829816667
+Flavo_culture_50:50_MeOH:H20_control,MeOH,0.813016667
+Flavo_culture_50:50_MeOH:H20_control,MeOH,0.810733333
+Flavo_culture_50:50_MeOH:H20_control,MeOH,0.727133333
+Flavo_culture_50:50_MeOH:H20_control,MeOH,0.7205
+Flavo_culture_50:50_MeOH:H20_control,MeOH,0.82455
+Flavo_culture_DMSO_50:50_MeOH:H20_control,DMSO + MeOH,0.787933333
+Flavo_culture_DMSO_50:50_MeOH:H20_control,DMSO + MeOH,0.752133333
+Flavo_culture_DMSO_50:50_MeOH:H20_control,DMSO + MeOH,0.706622222
+Flavo_culture_DMSO_50:50_MeOH:H20_control,DMSO + MeOH,0.721933333
+Flavo_culture_DMSO_50:50_MeOH:H20_control,DMSO + MeOH,0.838311111
+Flavo_culture_Bt_sup+DMSO,Supernatant,0.616544444
+Flavo_culture_Bt_sup+DMSO,Supernatant,0.614455556
+Flavo_culture_Bt_sup+DMSO,Supernatant,0.604088889
+Flavo_culture_Bt_sup+DMSO,Supernatant,0.593177778
+Flavo_culture_Bt_sup+DMSO,Supernatant,0.543688889
+Flavo_culture_Daidzein+50:50_MeOH:H20,Daidzein,0.799077778
+Flavo_culture_Daidzein+50:50_MeOH:H20,Daidzein,0.7387
+Flavo_culture_Daidzein+50:50_MeOH:H20,Daidzein,0.7034
+Flavo_culture_Daidzein+50:50_MeOH:H20,Daidzein,0.687244444
+Flavo_culture_Daidzein+50:50_MeOH:H20,Daidzein,0.753377778
+Flavo_culture_Btsup+Daidzein,Supernatant + Daidzein,0.428111111
+Flavo_culture_Btsup+Daidzein,Supernatant + Daidzein,0.410777778
+Flavo_culture_Btsup+Daidzein,Supernatant + Daidzein,0.393266667
+Flavo_culture_Btsup+Daidzein,Supernatant + Daidzein,0.264788889
+Flavo_culture_Btsup+Daidzein,Supernatant + Daidzein,0.469277778
+TSB NC,Medium control,0.040933333
+TSB NC,Medium control,0.041133333
+TSB NC,Medium control,0.038633333
+TSB NC,Medium control,0.048933333
+TSB NC,Medium control,0.052066667
+TSB NC,Medium control,0.0531
