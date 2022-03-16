@@ -9,5 +9,6 @@ Data and code files for Figure 4 <br>
 * Fj_RadialGrowthMeasurements.r
 
 Data and code files for breseq <br>
-breseqWorflow
+* breseqPrep <br>
+* breseqWorflow
 
