@@ -10,3 +10,35 @@ plot <- ggplot(data, aes(x=as.factor(Plate_Passage), y=Radial_growth, fill=Condi
     theme_bw()
 
 ggsave("Fig4.eps",plot=plot,device="eps",width=170,height=170, units="mm",dpi=300)
+
+#Subset data by plate passage
+data_pp1 <- data[data$Plate_Passage==1,]
+data_pp2 <- data[data$Plate_Passage==2,]
+data_pp3 <- data[data$Plate_Passage==3,]
+data_pp4 <- data[data$Plate_Passage==4,]
+data_pp5 <- data[data$Plate_Passage==5,]
+
+#Run Wilcoxon rank sum test between monoculture an coevolved within each plate passage and perform p-value correction
+p.adjust(as.numeric(wilcox.test(data_pp1$Radial_growth ~ data_pp1$Condition, paired=FALSE)$p.value),method="bonf", n=5) #0.03968254
+p.adjust(as.numeric(wilcox.test(data_pp2$Radial_growth ~ data_pp2$Condition, paired=FALSE)$p.value),method="bonf", n=5) #0.4761905
+p.adjust(as.numeric(wilcox.test(data_pp3$Radial_growth ~ data_pp3$Condition, paired=FALSE)$p.value),method="bonf", n=5) #0.1587302
+p.adjust(as.numeric(wilcox.test(data_pp4$Radial_growth ~ data_pp4$Condition, paired=FALSE)$p.value),method="bonf", n=5) #0.03968254
+p.adjust(as.numeric(wilcox.test(data_pp5$Radial_growth ~ data_pp5$Condition, paired=FALSE)$p.value),method="bonf", n=5) #0.4761905
+
+#Run Wilcoxon rank sum test within monoculture and within coevolved lines comparing the radial growth from the first and last time point
+library(dplyr)
+
+#Filter monoculture data from first and last plate passage
+data_pp5to1_mono <- data %>% 
+  filter(Plate_Passage== 1 | Plate_Passage==5, data$Condition == "Monoculture")
+
+#Run Wilcoxon rank sum test 
+wilcox.test(data_pp5to1_mono$Radial_growth ~ data_pp5to1_mono$Plate_Passage, paired=FALSE) #0.007937
+
+
+#Filter coevolved data from first and last plate passage
+data_pp5to1_coevo <- data %>% 
+  filter(Plate_Passage== 1 | Plate_Passage==5, data$Condition == "Coevolved")
+
+#Run Wilcoxon rank sum test
+wilcox.test(data_pp5to1_mono$Radial_growth ~ data_pp5to1_mono$Plate_Passage, paired=FALSE) #0.007937
