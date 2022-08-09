@@ -14,8 +14,30 @@ pp <- p + geom_boxplot()
 
 ggsave("Fig2.eps",plot=pp,device="eps",width=170,height=170, units="mm",dpi=300)
 
+#Subset controls from data
+data_controls <- data[1:20,]
 
-#Run anova
-fit <- aov(OD ~ Condition, data=data)
-summary(fit)
-TukeyHSD(fit)
+#Run Wilcoxon rank sum test on control
+pairwise.wilcox.test(data_controls$OD, data_controls$Condition, p.adj = "bonf", paired=FALSE)
+
+#There is no significance between controls. We'll remove redundant controls and the medium control where growth was not observed.
+#The pairwise wilcoxon rank test will have p-val adjustments. That is why we are making the choice to remove redundant controls
+#in order to reduce the number of p-val corrections. 
+
+#Filter dataset to obtain 1 control and other treatments of interest
+data_final <- data[c(1:5,21:35),]
+
+#Run Wilcoxon rank sum test
+pairwise.wilcox.test(data_final$OD, data_final$Condition, p.adj = "bonf", paired=FALSE)
+
+#Output
+	Pairwise comparisons using Wilcoxon rank sum exact test 
+
+data:  data_final$OD and data_final$Condition 
+
+                                      Flavo_culture_Bt_sup+DMSO Flavo_culture_Btsup+Daidzein Flavo_culture_control
+Flavo_culture_Btsup+Daidzein          0.048                     -                            -                    
+Flavo_culture_control                 0.048                     0.048                        -                    
+Flavo_culture_Daidzein+50:50_MeOH:H20 0.048                     0.048                        0.333                
+
+P value adjustment method: bonferroni 
