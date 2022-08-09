@@ -1,0 +1,28 @@
+data <- read.csv("KirbyBauerMICs_Flavo.csv",header=TRUE,sep=",")
+
+#Filter out Monoculture and Coevolved
+library(dplyr)
+
+data_monoAcoevo <- data %>% 
+  filter(Strain == "Monoculture" | Strain=="Coevolved")
+data_monoAcoevo
+
+#Run Wilcoxon rank sum test to test for differences in ZOIs between monocultures and coevolved  
+wilcox.test(data_monoAcoevo$ZOI ~ data_monoAcoevo$Strain, paired=FALSE) #3.358e-06
+
+#Filter out ancestor and coevolved and recombinant
+data_fil <- data[data$Filter=="A",]
+data_fil_1 <- data_fil[c(1:6),]
+data_fil_2 <- data_fil[c(1:3,7:9),]
+data_fil_3 <- data_fil[c(1:3,10:12),]
+data_fil_4 <- data_fil[c(1:3,13:15),]
+data_fil_5 <- data_fil[c(1:3,16:18),]
+data_fil_6 <- data_fil[c(1:3,19:21),]
+
+#Run Wilcoxon rank sum test between monoculture an coevolved within each plate passage and perform p-value correction
+p.adjust(as.numeric(wilcox.test(data_fil_1$ZOI ~ data_fil_1$Strain, paired=FALSE)$p.value),method="bonf", n=6) #0.6
+p.adjust(as.numeric(wilcox.test(data_fil_2$ZOI ~ data_fil_2$Strain, paired=FALSE)$p.value),method="bonf", n=6) #0.6
+p.adjust(as.numeric(wilcox.test(data_fil_3$ZOI ~ data_fil_3$Strain, paired=FALSE)$p.value),method="bonf", n=6) #0.382
+p.adjust(as.numeric(wilcox.test(data_fil_4$ZOI ~ data_fil_4$Strain, paired=FALSE)$p.value),method="bonf", n=6) #0.6
+p.adjust(as.numeric(wilcox.test(data_fil_5$ZOI ~ data_fil_5$Strain, paired=FALSE)$p.value),method="bonf", n=6) #1.0
+p.adjust(as.numeric(wilcox.test(data_fil_6$ZOI ~ data_fil_6$Strain, paired=FALSE)$p.value),method="bonf", n=6) #1.0
