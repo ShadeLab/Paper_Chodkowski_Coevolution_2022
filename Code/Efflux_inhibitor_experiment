@@ -41,4 +41,4 @@ Flavo_culture_Btsup+Daidzein          0.0095                     -              
 Flavo_culture_control                 0.0095                     0.0095                       -                    
 Flavo_culture_Daidzein+50:50_MeOH:H20 0.0095                     0.0095                       0.0556                
 
-P value adjustment method: bonferroni 
+P value adjustment method: FDR
