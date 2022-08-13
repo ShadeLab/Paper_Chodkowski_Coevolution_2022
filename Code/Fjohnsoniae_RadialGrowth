@@ -19,11 +19,11 @@ data_pp4 <- data[data$Plate_Passage==4,]
 data_pp5 <- data[data$Plate_Passage==5,]
 
 #Run Wilcoxon rank sum test between monoculture an coevolved within each plate passage and perform p-value correction
-p.adjust(as.numeric(wilcox.test(data_pp1$Radial_growth ~ data_pp1$Condition, paired=FALSE)$p.value),method="bonf", n=5) #0.03968254
-p.adjust(as.numeric(wilcox.test(data_pp2$Radial_growth ~ data_pp2$Condition, paired=FALSE)$p.value),method="bonf", n=5) #0.4761905
-p.adjust(as.numeric(wilcox.test(data_pp3$Radial_growth ~ data_pp3$Condition, paired=FALSE)$p.value),method="bonf", n=5) #0.1587302
-p.adjust(as.numeric(wilcox.test(data_pp4$Radial_growth ~ data_pp4$Condition, paired=FALSE)$p.value),method="bonf", n=5) #0.03968254
-p.adjust(as.numeric(wilcox.test(data_pp5$Radial_growth ~ data_pp5$Condition, paired=FALSE)$p.value),method="bonf", n=5) #0.4761905
+p.adjust(as.numeric(wilcox.test(data_pp1$Radial_growth ~ data_pp1$Condition, paired=FALSE)$p.value),method="fdr", n=5) #0.03968254
+p.adjust(as.numeric(wilcox.test(data_pp2$Radial_growth ~ data_pp2$Condition, paired=FALSE)$p.value),method="fdr", n=5) #0.4761905
+p.adjust(as.numeric(wilcox.test(data_pp3$Radial_growth ~ data_pp3$Condition, paired=FALSE)$p.value),method="fdr", n=5) #0.1587302
+p.adjust(as.numeric(wilcox.test(data_pp4$Radial_growth ~ data_pp4$Condition, paired=FALSE)$p.value),method="fdr", n=5) #0.03968254
+p.adjust(as.numeric(wilcox.test(data_pp5$Radial_growth ~ data_pp5$Condition, paired=FALSE)$p.value),method="fdr", n=5) #0.4761905
 
 #Run Wilcoxon rank sum test within monoculture and within coevolved lines comparing the radial growth from the first and last time point
 library(dplyr)
