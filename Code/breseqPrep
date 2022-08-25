@@ -1,28 +1,29 @@
 Raw data files can be obtained from NCBI Bioproject ID PRJNA812898[link when public]
 
 #Write trimmomatic parameters for all samples containing forward and reverse reads (raw reads downloaded from NCBI)
-for i in `ls -1 *R1_001*.fastq.gz | sed 's/\_R1_001.fastq.gz//'`; do echo java -jar $EBROOTTRIMMOMATIC/trimmomatic-0.36.jar PE $i\_R1_001.fastq.gz $i\_R2_001.fastq.gz $i\_R1_001_paired.fastq.gz $i\_R1_001_unpaired.fastq.gz $i\_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70 >> trimmomaticScripts; done
+for i in `ls -1 *R1_001*.fastq.gz | sed 's/\_R1_001.fastq.gz//'`; do echo java -jar $EBROOTTRIMMOMATIC/trimmomatic-0.39.jar PE $i\_R1_001.fastq.gz $i\_R2_001.fastq.gz $i\_R1_001_paired.fastq.gz $i\_R1_001_unpaired.fastq.gz $i\_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70 >> trimmomaticScripts; done
 
 #Create script for trimmomatic
 #!/bin/bash
 
-module load Trimmomatic/0.36-Java-1.8.0_92
+module load Trimmomatic/0.39-Java-11
 
-java -jar /opt/software/Trimmomatic/0.36-Java-1.8.0_92/trimmomatic-0.36.jar PE Fj_anc_S47_R1_001.fastq.gz Fj_anc_S47_R2_001.fastq.gz Fj_anc_S47_R1_001_paired.fastq.gz Fj_anc_S47_R1_001_unpaired.fastq.gz Fj_anc_S47_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
-java -jar /opt/software/Trimmomatic/0.36-Java-1.8.0_92/trimmomatic-0.36.jar PE Fj_co1_S48_R1_001.fastq.gz Fj_co1_S48_R2_001.fastq.gz Fj_co1_S48_R1_001_paired.fastq.gz Fj_co1_S48_R1_001_unpaired.fastq.gz Fj_co1_S48_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
-java -jar /opt/software/Trimmomatic/0.36-Java-1.8.0_92/trimmomatic-0.36.jar PE Fj_co2_S49_R1_001.fastq.gz Fj_co2_S49_R2_001.fastq.gz Fj_co2_S49_R1_001_paired.fastq.gz Fj_co2_S49_R1_001_unpaired.fastq.gz Fj_co2_S49_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
-java -jar /opt/software/Trimmomatic/0.36-Java-1.8.0_92/trimmomatic-0.36.jar PE Fj_co3_S50_R1_001.fastq.gz Fj_co3_S50_R2_001.fastq.gz Fj_co3_S50_R1_001_paired.fastq.gz Fj_co3_S50_R1_001_unpaired.fastq.gz Fj_co3_S50_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
-java -jar /opt/software/Trimmomatic/0.36-Java-1.8.0_92/trimmomatic-0.36.jar PE Fj_co4_S51_R1_001.fastq.gz Fj_co4_S51_R2_001.fastq.gz Fj_co4_S51_R1_001_paired.fastq.gz Fj_co4_S51_R1_001_unpaired.fastq.gz Fj_co4_S51_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
-java -jar /opt/software/Trimmomatic/0.36-Java-1.8.0_92/trimmomatic-0.36.jar PE Fj_co5_S52_R1_001.fastq.gz Fj_co5_S52_R2_001.fastq.gz Fj_co5_S52_R1_001_paired.fastq.gz Fj_co5_S52_R1_001_unpaired.fastq.gz Fj_co5_S52_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
-java -jar /opt/software/Trimmomatic/0.36-Java-1.8.0_92/trimmomatic-0.36.jar PE Fj_mc1_S53_R1_001.fastq.gz Fj_mc1_S53_R2_001.fastq.gz Fj_mc1_S53_R1_001_paired.fastq.gz Fj_mc1_S53_R1_001_unpaired.fastq.gz Fj_mc1_S53_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
-java -jar /opt/software/Trimmomatic/0.36-Java-1.8.0_92/trimmomatic-0.36.jar PE Fj_mc2_S54_R1_001.fastq.gz Fj_mc2_S54_R2_001.fastq.gz Fj_mc2_S54_R1_001_paired.fastq.gz Fj_mc2_S54_R1_001_unpaired.fastq.gz Fj_mc2_S54_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
-java -jar /opt/software/Trimmomatic/0.36-Java-1.8.0_92/trimmomatic-0.36.jar PE Fj_mc3_S55_R1_001.fastq.gz Fj_mc3_S55_R2_001.fastq.gz Fj_mc3_S55_R1_001_paired.fastq.gz Fj_mc3_S55_R1_001_unpaired.fastq.gz Fj_mc3_S55_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
-java -jar /opt/software/Trimmomatic/0.36-Java-1.8.0_92/trimmomatic-0.36.jar PE Fj_mc4_S56_R1_001.fastq.gz Fj_mc4_S56_R2_001.fastq.gz Fj_mc4_S56_R1_001_paired.fastq.gz Fj_mc4_S56_R1_001_unpaired.fastq.gz Fj_mc4_S56_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
-java -jar /opt/software/Trimmomatic/0.36-Java-1.8.0_92/trimmomatic-0.36.jar PE Fj_mc5_S57_R1_001.fastq.gz Fj_mc5_S57_R2_001.fastq.gz Fj_mc5_S57_R1_001_paired.fastq.gz Fj_mc5_S57_R1_001_unpaired.fastq.gz Fj_mc5_S57_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
+java -jar /opt/software/Trimmomatic/0.39-Java-11/trimmomatic-0.39.jar PE Fj_anc_S47_R1_001.fastq.gz Fj_anc_S47_R2_001.fastq.gz Fj_anc_S47_R1_001_paired.fastq.gz Fj_anc_S47_R1_001_unpaired.fastq.gz Fj_anc_S47_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
+java -jar /opt/software/Trimmomatic/0.39-Java-11/trimmomatic-0.39.jar PE Fj_co1_S48_R1_001.fastq.gz Fj_co1_S48_R2_001.fastq.gz Fj_co1_S48_R1_001_paired.fastq.gz Fj_co1_S48_R1_001_unpaired.fastq.gz Fj_co1_S48_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
+java -jar /opt/software/Trimmomatic/0.39-Java-11/trimmomatic-0.39.jar PE Fj_co2_S49_R1_001.fastq.gz Fj_co2_S49_R2_001.fastq.gz Fj_co2_S49_R1_001_paired.fastq.gz Fj_co2_S49_R1_001_unpaired.fastq.gz Fj_co2_S49_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
+java -jar /opt/software/Trimmomatic/0.39-Java-11/trimmomatic-0.39.jar PE Fj_co3_S50_R1_001.fastq.gz Fj_co3_S50_R2_001.fastq.gz Fj_co3_S50_R1_001_paired.fastq.gz Fj_co3_S50_R1_001_unpaired.fastq.gz Fj_co3_S50_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
+java -jar /opt/software/Trimmomatic/0.39-Java-11/trimmomatic-0.39.jar PE Fj_co4_S51_R1_001.fastq.gz Fj_co4_S51_R2_001.fastq.gz Fj_co4_S51_R1_001_paired.fastq.gz Fj_co4_S51_R1_001_unpaired.fastq.gz Fj_co4_S51_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
+java -jar /opt/software/Trimmomatic/0.39-Java-11/trimmomatic-0.39.jar PE Fj_co5_S52_R1_001.fastq.gz Fj_co5_S52_R2_001.fastq.gz Fj_co5_S52_R1_001_paired.fastq.gz Fj_co5_S52_R1_001_unpaired.fastq.gz Fj_co5_S52_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
+java -jar /opt/software/Trimmomatic/0.39-Java-11/trimmomatic-0.39.jar PE Fj_mc1_S53_R1_001.fastq.gz Fj_mc1_S53_R2_001.fastq.gz Fj_mc1_S53_R1_001_paired.fastq.gz Fj_mc1_S53_R1_001_unpaired.fastq.gz Fj_mc1_S53_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
+java -jar /opt/software/Trimmomatic/0.39-Java-11/trimmomatic-0.39.jar PE Fj_mc2_S54_R1_001.fastq.gz Fj_mc2_S54_R2_001.fastq.gz Fj_mc2_S54_R1_001_paired.fastq.gz Fj_mc2_S54_R1_001_unpaired.fastq.gz Fj_mc2_S54_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
+java -jar /opt/software/Trimmomatic/0.39-Java-11/trimmomatic-0.39.jar PE Fj_mc3_S55_R1_001.fastq.gz Fj_mc3_S55_R2_001.fastq.gz Fj_mc3_S55_R1_001_paired.fastq.gz Fj_mc3_S55_R1_001_unpaired.fastq.gz Fj_mc3_S55_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
+java -jar /opt/software/Trimmomatic/0.39-Java-11/trimmomatic-0.39.jar PE Fj_mc4_S56_R1_001.fastq.gz Fj_mc4_S56_R2_001.fastq.gz Fj_mc4_S56_R1_001_paired.fastq.gz Fj_mc4_S56_R1_001_unpaired.fastq.gz Fj_mc4_S56_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
+java -jar /opt/software/Trimmomatic/0.39-Java-11/trimmomatic-0.39.jar PE Fj_mc5_S57_R1_001.fastq.gz Fj_mc5_S57_R2_001.fastq.gz Fj_mc5_S57_R1_001_paired.fastq.gz Fj_mc5_S57_R1_001_unpaired.fastq.gz Fj_mc5_S57_R2_001_paired.fastq.gz LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:70
 
 #End of script
 
 #Run trimmomatic script
+chmod +x runTrimmomatic.sh
 ./runTrimmomatic.sh
 
 #The following files should be your output
