@@ -1,9 +1,9 @@
 ## Github repository for 
-# A co-evolution experiment results in parallel mutations in the AcrA-AcrB-TolC efflux pump that contributes to bacterial antibiotic resistance 
+# A coevolution experiment between Flavobacterium johnsoniae and Burkholderia thailandensis reveals parallel mutations that reduce antibiotic susceptibility
 ## By John Chodkowski and Ashley Shade
-*This work is available as a preprint*
+*This work is accepted at Microbiology*
 ## To cite this work or code
-Chodkowski JL and A Shade.  2022. A co-evolution experiment reveals parallel mutations in the AcrA-AcrB-TolC efflux pump that contributes to bacterial antibiotic resistance. bioRXiv. https://www.biorxiv.org/content/10.1101/2022.03.16.484489v1
+Chodkowski JL and A Shade.  2022. A coevolution experiment between Flavobacterium johnsoniae and Burkholderia thailandensis reveals parallel mutations that reduce antibiotic susceptibility. Microbiology. https://www.biorxiv.org/content/10.1101/2022.03.16.484489v1
 
 ## Data
 *Flavobacterium johnsoniae* UW101 whole genome raw sequences files are deposited in the NCBI Sequence Read Archive (BioProject ID [PRJNA812898](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA812898)).
