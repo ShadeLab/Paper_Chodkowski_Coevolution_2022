@@ -1,5 +1,5 @@
 ## Github repository for 
-# A coevolution experiment between Flavobacterium johnsoniae and Burkholderia thailandensis reveals parallel mutations that reduce antibiotic susceptibility
+# A coevolution experiment between *Flavobacterium johnsoniae* and *Burkholderia thailandensis* reveals parallel mutations that reduce antibiotic susceptibility
 ## By John Chodkowski and Ashley Shade
 *This work is accepted at Microbiology*
 ## To cite this work or code
