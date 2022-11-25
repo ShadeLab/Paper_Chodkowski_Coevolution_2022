@@ -3,7 +3,7 @@
 ## By John Chodkowski and Ashley Shade
 *This work is accepted at Microbiology*
 ## To cite this work or code
-Chodkowski JL and A Shade.  2022. A coevolution experiment between Flavobacterium johnsoniae and Burkholderia thailandensis reveals parallel mutations that reduce antibiotic susceptibility. Microbiology. https://www.biorxiv.org/content/10.1101/2022.03.16.484489v1
+Chodkowski JL and A Shade.  2022. A coevolution experiment between Flavobacterium johnsoniae and Burkholderia thailandensis reveals parallel mutations that reduce antibiotic susceptibility. Microbiology. https://doi.org/MIC-D-22-00095 
 
 ## Data
 *Flavobacterium johnsoniae* UW101 and *Burkholderia thailandensis* E264 whole genome raw sequences files are deposited in the NCBI Sequence Read Archive (BioProject ID [PRJNA812898](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA812898)).
